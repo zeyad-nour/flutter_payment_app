@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:payment_getways_app/Features/checkout/Presentation/view/payment_details.dart';
 import 'package:payment_getways_app/Features/checkout/Presentation/view/widgets/OrderInfo.dart';
 import 'package:payment_getways_app/Features/checkout/Presentation/view/widgets/customButton.dart';
 import 'package:payment_getways_app/Features/checkout/Presentation/view/widgets/totalPraice.dart';
@@ -25,7 +26,14 @@ class MyCartViewBody extends StatelessWidget {
           ),
           TotalPrice(title: "Total", value: "\$ 100.00"),
           SizedBox(height: 16),
-          CustomButtom(),
+          CustomButtom(
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (context) => PaymentDetails()));
+            },
+          ),
+          SizedBox(height: 16),
         ],
       ),
     );
