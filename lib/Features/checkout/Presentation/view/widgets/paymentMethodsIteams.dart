@@ -40,7 +40,9 @@ class PaymentMethodIteam extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
           color: Colors.white,
         ),
-        child: Center(child: SvgPicture.asset(imagePath, height: 40)),
+        child: Center(
+          child: SvgPicture.asset(imagePath, height: 50, fit: BoxFit.scaleDown),
+        ),
       ),
     );
   }
