@@ -27,6 +27,7 @@ class MyCartViewBody extends StatelessWidget {
           TotalPrice(title: "Total", value: "\$ 100.00"),
           SizedBox(height: 16),
           CustomButtom(
+            text: "Complete Payment",
             onPressed: () {
               Navigator.of(
                 context,

@@ -1,9 +1,11 @@
+// ignore_for_file: file_names, avoid_types_as_parameter_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 class CustomCreditCard extends StatefulWidget {
-  const CustomCreditCard({super.key});
+  const CustomCreditCard({super.key, required this.formKey});
+  final GlobalKey<FormState> formKey;
 
   @override
   State<CustomCreditCard> createState() => _CustomCreditCardState();
@@ -19,7 +21,6 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
   String cvvCode = '';
 
   bool showBackView = false;
-  final GlobalKey<FormState> formKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -46,7 +47,7 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
             showBackView = CreditCardModel.isCvvFocused;
             setState(() {});
           },
-          formKey: formKey,
+          formKey: widget.formKey,
         ),
       ],
     );

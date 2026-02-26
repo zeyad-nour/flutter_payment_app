@@ -5,8 +5,8 @@ import 'package:payment_getways_app/core/utils/style.dart';
 
 class CustomButtom extends StatelessWidget {
   final void Function() onPressed;
-
-  const CustomButtom({super.key, required this.onPressed});
+  final String text;
+  const CustomButtom({super.key, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class CustomButtom extends StatelessWidget {
         onPressed: onPressed,
         child: Center(
           child: Text(
-            "Complete Payment",
+           text,
             style: Style.style18.copyWith(
               color: Colors.black,
               fontWeight: FontWeight.bold,
