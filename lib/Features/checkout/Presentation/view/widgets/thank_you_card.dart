@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:payment_getways_app/Features/checkout/Presentation/view/widgets/payment_iteam_info.dart';
+import 'package:payment_getways_app/Features/checkout/Presentation/view/widgets/totalPraice.dart';
 import 'package:payment_getways_app/core/utils/style.dart';
 
 class ThankYouCard extends StatelessWidget {
@@ -34,26 +36,22 @@ class ThankYouCard extends StatelessWidget {
             PaymentItemInfo(title: "Time", value: "10:30 AM"),
             SizedBox(height: 20),
             PaymentItemInfo(title: "To", value: "Sam Louis"),
+            Divider(height: 60, thickness: 2),
+            TotalPrice(title: "Total", value: r"$50.97"),
+
+            Container(
+              width: 305,
+              height: 73,
+              decoration: ShapeDecoration(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+              ),
+            ),
           ],
         ),
       ),
-    );
-  }
-}
-
-class PaymentItemInfo extends StatelessWidget {
-  final String title;
-  final String value;
-  const PaymentItemInfo({super.key, required this.title, required this.value});
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(title, textAlign: TextAlign.center, style: Style.style18),
-        Text(value, style: Style.style18),
-      ],
     );
   }
 }
