@@ -3,6 +3,8 @@ import 'package:payment_getways_app/Features/checkout/Presentation/view/widgets/
 import 'package:payment_getways_app/Features/checkout/Presentation/view/widgets/totalPraice.dart';
 import 'package:payment_getways_app/core/utils/style.dart';
 
+import 'card_info_widget.dart';
+
 class ThankYouCard extends StatelessWidget {
   const ThankYouCard({super.key});
 
@@ -38,20 +40,12 @@ class ThankYouCard extends StatelessWidget {
             PaymentItemInfo(title: "To", value: "Sam Louis"),
             Divider(height: 60, thickness: 2),
             TotalPrice(title: "Total", value: r"$50.97"),
-
-            Container(
-              width: 305,
-              height: 73,
-              decoration: ShapeDecoration(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-              ),
-            ),
+            SizedBox(height: 20),
+            CardInfoWidget(),
           ],
         ),
       ),
     );
   }
 }
+
