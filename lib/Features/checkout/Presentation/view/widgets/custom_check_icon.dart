@@ -1,10 +1,7 @@
-
 import 'package:flutter/material.dart';
 
 class CustomCheckIcon extends StatelessWidget {
-  const CustomCheckIcon({
-    super.key,
-  });
+  const CustomCheckIcon({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +10,8 @@ class CustomCheckIcon extends StatelessWidget {
       backgroundColor: Color(0xffd9d9d9),
       child: CircleAvatar(
         backgroundColor: Color(0xff34a853),
-        child: Icon(Icons.check, color: Colors.white, size: 54),
+        child: Icon(Icons.check, color: Colors.white, size: 30),
       ),
     );
   }
 }
-

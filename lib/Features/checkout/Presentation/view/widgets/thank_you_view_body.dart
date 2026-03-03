@@ -20,23 +20,21 @@ class ThankYouViewBody extends StatelessWidget {
             right: 20 + 16,
             child: Custom_Dashed_Line(),
           ),
+
           Positioned(
-            bottom: -20,
-            left: MediaQuery.of(context).size.width * 0.2,
+            top: 390,
+            right: -20,
+            left: MediaQuery.of(context).size.width * 0.8,
             child: CircleAvatar(radius: 50, backgroundColor: Colors.white),
           ),
           Positioned(
-            right: -20,
-            left: MediaQuery.of(context).size.width * 0.2,
+            top: 390,
+            right: 50,
+            left: MediaQuery.of(context).size.width * -0.9,
             child: CircleAvatar(radius: 50, backgroundColor: Colors.white),
           ),
 
-          Positioned(
-            left: 0,
-            height: 0,
-            top: -50,
-            child: CustomCheckIcon(),
-          ),
+          Positioned(left: 0, right: 0, top: 5, child: CustomCheckIcon()),
         ],
       ),
     );

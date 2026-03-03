@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:payment_getways_app/Features/checkout/Presentation/view/widgets/payment_iteam_info.dart';
 import 'package:payment_getways_app/Features/checkout/Presentation/view/widgets/totalPraice.dart';
 import 'package:payment_getways_app/core/utils/style.dart';
@@ -42,10 +43,31 @@ class ThankYouCard extends StatelessWidget {
             TotalPrice(title: "Total", value: r"$50.97"),
             SizedBox(height: 20),
             CardInfoWidget(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(FontAwesomeIcons.barcode, size: 64),
+                Container(
+                  alignment: Alignment.center,
+                  width: 113,
+                  height: 58,
+                  decoration: ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(width: 1.50, color: Color(0xff34a853)),
+                      borderRadius: BorderRadiusGeometry.circular(15),
+                    ),
+                  ),
+                  child: Text(
+                    "PAID",
+                    textAlign: TextAlign.center,
+                    style: Style.style24.copyWith(color: Color(0xff34a853)),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
 }
-
