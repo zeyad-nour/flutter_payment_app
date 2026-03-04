@@ -29,7 +29,6 @@ class MyCartViewBody extends StatelessWidget {
           CustomButtom(
             text: "Complete Payment",
             onPressed: () {
-            
               showModalBottomSheet(
                 context: context,
                 builder: (context) {
@@ -60,12 +59,7 @@ class PaymentMethodsBottmsheet extends StatelessWidget {
           Center(child: paymentmethodListview()),
           SizedBox(height: 30),
 
-          CustomButtom(
-            onPressed: () {
-             
-            },
-            text: "Continue",
-          ),
+          CustomButtom(onPressed: () {}, text: "Continue"),
         ],
       ),
     );
