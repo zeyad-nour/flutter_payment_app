@@ -6,9 +6,6 @@ class ThankYouView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold( 
-      appBar: AppBar(),
-      body: ThankYouViewBody(),
-    );
+    return Scaffold(appBar: AppBar(), body: ThankYouViewBody());
   }
 }

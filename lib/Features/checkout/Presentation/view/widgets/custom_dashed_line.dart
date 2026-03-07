@@ -3,9 +3,7 @@
 import 'package:flutter/material.dart';
 
 class Custom_Dashed_Line extends StatelessWidget {
-  const Custom_Dashed_Line({
-    super.key,
-  });
+  const Custom_Dashed_Line({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,4 +20,3 @@ class Custom_Dashed_Line extends StatelessWidget {
     );
   }
 }
-

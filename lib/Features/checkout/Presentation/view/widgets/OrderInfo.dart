@@ -17,4 +17,3 @@ class OrderInfoIteam extends StatelessWidget {
     );
   }
 }
-

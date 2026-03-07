@@ -10,10 +10,12 @@ class CheckoutApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: MyCartView()
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: MyCartView());
   }
 }
-                                                
+
+//paymentIntentObject create payment_intent (amount,currency) (Server Side)
+
+// init payment_sheet(paymentIntentClientSecret) (Client Side)
+
+// prsent_payment_sheet (Client Side)(UI)
