@@ -3,7 +3,7 @@ class PaymentIntentInputModel {
   final String currency;
 
   PaymentIntentInputModel({required this.amount, required this.currency});
-  Map<String, String> toJson() {
+  toJson() {
     return {"amount": amount, "currency": currency};
   }
 }
