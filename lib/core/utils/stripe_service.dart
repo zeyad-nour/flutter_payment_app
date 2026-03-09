@@ -1,3 +1,4 @@
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:payment_getways_app/Features/checkout/data/models/payment_intent_input_model.dart';
 import 'package:payment_getways_app/Features/checkout/data/models/payment_intint_model/payment_intint_model.dart';
 import 'package:payment_getways_app/core/utils/api_keys.dart';
@@ -15,5 +16,14 @@ class StripeService {
     );
     var paymentIntintModel = PaymentIntintModel.fromJson(response.data);
     return paymentIntintModel;
+  }
+
+  Future initPaymentSheet({required String paymentIntentClientSecret}) async {
+    Stripe.instance.initPaymentSheet(
+      paymentSheetParameters: SetupPaymentSheetParameters(
+        paymentIntentClientSecret: paymentIntentClientSecret,
+        merchantDisplayName: 'Zeyad Ahmed Nour El-Din',
+      ),
+    );
   }
 }
