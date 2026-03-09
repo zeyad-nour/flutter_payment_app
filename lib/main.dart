@@ -14,8 +14,8 @@ class CheckoutApp extends StatelessWidget {
   }
 }
 
-//paymentIntentObject create payment_intent (amount,currency) (Server Side)
+//paymentIntentObject create payment_intent (amount,currency) (Server Side) [Done]
 
-// init payment_sheet(paymentIntentClientSecret) (Client Side)
+// init payment_sheet(paymentIntentClientSecret) (Client Side)  [Done]
 
-// prsent_payment_sheet (Client Side)(UI)
+// prsent_payment_sheet (Client Side)(UI) [Done]
