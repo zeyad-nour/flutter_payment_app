@@ -4,9 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:payment_getways_app/core/utils/style.dart';
 
 class CustomButtom extends StatelessWidget {
+  final bool isLoding;
   final void Function() onPressed;
   final String text;
-  const CustomButtom({super.key, required this.onPressed, required this.text});
+  const CustomButtom({
+    super.key,
+    required this.onPressed,
+    required this.text,
+    this.isLoding = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +26,16 @@ class CustomButtom extends StatelessWidget {
       child: MaterialButton(
         onPressed: onPressed,
         child: Center(
-          child: Text(
-            text,
-            style: Style.style18.copyWith(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 22,
-            ),
-          ),
+          child: isLoding == true
+              ? CircularProgressIndicator()
+              : Text(
+                  text,
+                  style: Style.style18.copyWith(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22,
+                  ),
+                ),
         ),
       ),
     );
