@@ -28,7 +28,7 @@ class CustomButtonBlocConsumer extends StatelessWidget {
         return CustomButtom(
           onPressed: () {
             PaymentIntentInputModel paymentIntentInputModel =
-                PaymentIntentInputModel(amount: '10000', currency: "USD");
+                PaymentIntentInputModel(amount: '100', currency: "USD");
             BlocProvider.of<PaymentCubit>(
               context,
             ).makePayment(paymentIntentInputModel: paymentIntentInputModel);
